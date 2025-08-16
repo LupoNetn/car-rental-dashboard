@@ -37,7 +37,6 @@ const Sidebar = () => {
 
       {/* Mobile Top Bar */}
       <div className="md:hidden p-4 bg-gray-950 text-white flex justify-between items-center">
-        <h1 className="font-bold">Menu</h1>
         <button onClick={() => setIsOpen((prev) => !prev)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
