@@ -8,6 +8,7 @@ import Bookings from './components/Bookings'
 const App = () => {
   return (
    <>
+   <div className=''>
     <BrowserRouter>
      <Routes>
        <Route path='/' element={<MainLayout />}>
@@ -17,6 +18,7 @@ const App = () => {
        </Route>
      </Routes>
     </BrowserRouter>
+    </div> 
    </>
   )
 }
