@@ -15,7 +15,7 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const SidebarContent = () => (
-    <div className="w-40 md:w-35 h-screen flex flex-col items-start py-6 space-y-6 md:bg-gray-950 bg-black/60 max-md:backdrop-blur-2xl text-white">
+    <div className="w-40 md:w-35 flex flex-col items-start py-6 space-y-6 md:bg-gray-950 bg-black/60 max-md:backdrop-blur-2xl text-white">
       {menuItems.map((item) => (
         <Link
           key={item.id}
@@ -27,17 +27,17 @@ const Sidebar = () => {
           <span>{item.name}</span>
         </Link>
       ))}
-      <hr className="text-gray-600"/>
+      <hr className="text-gray-600" />
     </div>
   );
 
   return (
     <>
-      {/* Desktop Sidebar */}
-      <div className="hidden md:block bg-gray-950 p-4">
+      {/* Desktop Sidebar (fills height of parent flex container, not fixed screen height) */}
+      <div className="hidden md:flex md:flex-col md:bg-gray-950 p-4 h-full overflow-y-auto">
         <div className="px-2 py-5 flex gap-3 items-center">
-            <img src={Logo} alt="" />
-            <h1 className="text-lg font-bold text-white">CAR RENTAL</h1> 
+          <img src={Logo} alt="" />
+          <h1 className="text-lg font-bold text-white">CAR RENTAL</h1>
         </div>
         <SidebarContent />
       </div>
@@ -50,10 +50,10 @@ const Sidebar = () => {
         </button>
 
         {/* Company Logo/Name */}
-       <div className="flex gap-1 items-center">
+        <div className="flex gap-1 items-center">
           <img src={Logo} alt="" />
-         <h1 className="text-lg font-bold">CAR RENTAL</h1>
-       </div>
+          <h1 className="text-lg font-bold">CAR RENTAL</h1>
+        </div>
       </nav>
 
       {/* Mobile Sidebar Overlay */}

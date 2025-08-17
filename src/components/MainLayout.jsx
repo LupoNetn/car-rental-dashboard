@@ -5,12 +5,10 @@ import Sidebar from './Sidebar'
 const MainLayout = () => {
   return (
     <>
-    <div className='flex flex-col md:flex-row gap-0 '>
+    <div className='flex flex-col md:flex-row md:items-stretch gap-0 min-h-screen'>
      {/* Sidebar and Mobile Nav */}
-      <nav>
-        <div>
+      <nav className='md:bg-gray-950'>
             <Sidebar />
-        </div>
       </nav>
      {/* Main Content */}
      <main className='flex-1'>

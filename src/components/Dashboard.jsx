@@ -1,4 +1,5 @@
 import { ArrowDown, ArrowUp } from "lucide-react";
+import PieChartComponent from './PieChart.jsx'
 import React from "react";
 
 const statData = [
@@ -26,7 +27,7 @@ const Dashboard = () => {
   return (
     <>
       <div className="mt-0 flex flex-col md:items-center md:flex-row">
-        <div className="p-8 h-screen bg-gray-50 flex-1">
+        <div className="p-8 bg-gray-50 flex-1">
           <div>
             <div className="max-sm:flex justify-between items-center">
               <h2 className="font-bold text-xl ">Today's Statistics</h2>
@@ -69,6 +70,11 @@ const Dashboard = () => {
                 </div>
               ))}
             </div>
+
+            <div>
+              <PieChartComponent />
+            </div>
+
           </div>
         </div>
         <div className="flex-2"></div>
