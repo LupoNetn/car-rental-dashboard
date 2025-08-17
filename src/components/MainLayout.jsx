@@ -5,7 +5,7 @@ import Sidebar from './Sidebar'
 const MainLayout = () => {
   return (
     <>
-    <div className='flex gap-4 items-baseline'>
+    <div className='flex flex-col md:flex-row gap-0 '>
      {/* Sidebar and Mobile Nav */}
       <nav>
         <div>
@@ -13,7 +13,7 @@ const MainLayout = () => {
         </div>
       </nav>
      {/* Main Content */}
-     <main className=''>
+     <main className='flex-1'>
        <Outlet />
      </main>
      </div>
