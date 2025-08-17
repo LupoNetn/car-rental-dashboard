@@ -17,13 +17,20 @@ const RADIAN = Math.PI / 180;
 
 // 👇 Function that renders custom labels inside the slices (the percentages)
 // It receives props like the slice position, angle, and percentage
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
+const renderCustomizedLabel = ({
+  cx,
+  cy,
+  midAngle,
+  innerRadius,
+  outerRadius,
+  percent,
+}) => {
   // Calculate the radius (middle point between inner and outer radius)
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
 
   // Calculate X and Y position for the text label using angle + radius
-  const x = cx + radius * Math.cos(-(midAngle) * RADIAN);
-  const y = cy + radius * Math.sin(-(midAngle) * RADIAN);
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
     <text
@@ -48,7 +55,6 @@ export default function PieChartComponent() {
     // - Responsive width
     // - Centers content
     <div className="bg-white mt-5 rounded-md p-4 w-full max-w-lg mx-auto flex flex-col items-center">
-      
       {/* 👇 Chart wrapper with responsive height (adjusts for different screens) */}
       <div className="w-full h-64 sm:h-72 md:h-80">
         <ResponsiveContainer width="100%" height="100%">
@@ -65,7 +71,10 @@ export default function PieChartComponent() {
             >
               {/* 👇 Create slices and apply matching colors */}
               {data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
               ))}
             </Pie>
           </PieChart>
@@ -82,7 +91,9 @@ export default function PieChartComponent() {
               style={{ backgroundColor: COLORS[index % COLORS.length] }}
             />
             {/* Show label (Hired/Cancelled/Pending) */}
-            <span className="text-sm font-medium text-gray-700">{entry.name}:</span>
+            <span className="text-sm font-medium text-gray-700">
+              {entry.name}:
+            </span>
             {/* Show raw value (number of items) */}
             <span className="text-sm text-gray-600">{entry.value}</span>
           </div>
