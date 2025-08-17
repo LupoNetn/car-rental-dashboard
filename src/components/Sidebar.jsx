@@ -1,15 +1,30 @@
 import React, { useState } from "react";
 import { Home, User, Calendar, Bell, Settings, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import Logo from '../assets/Frame.png'
+import Logo from "../assets/Frame.png";
 
 const Sidebar = () => {
   const menuItems = [
     { id: 1, name: "Dashboard", icon: <Home size={22} />, path: "/" },
     { id: 2, name: "Drivers", icon: <User size={22} />, path: "/drivers" },
-    { id: 3, name: "Bookings", icon: <Calendar size={22} />, path: "/bookings" },
-    { id: 4, name: "Notifications", icon: <Bell size={22} />, path: "/notifications" },
-    { id: 5, name: "Settings", icon: <Settings size={22} />, path: "/settings" },
+    {
+      id: 3,
+      name: "Bookings",
+      icon: <Calendar size={22} />,
+      path: "/bookings",
+    },
+    {
+      id: 4,
+      name: "Notifications",
+      icon: <Bell size={22} />,
+      path: "/notifications",
+    },
+    {
+      id: 5,
+      name: "Settings",
+      icon: <Settings size={22} />,
+      path: "/settings",
+    },
   ];
 
   const [isOpen, setIsOpen] = useState(false);

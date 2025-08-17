@@ -1,5 +1,5 @@
 import { ArrowDown, ArrowUp } from "lucide-react";
-import PieChartComponent from './PieChart.jsx'
+import PieChartComponent from "./PieChart.jsx";
 import React from "react";
 
 const statData = [
@@ -65,7 +65,9 @@ const Dashboard = () => {
                     <p className="font-bold text-gray-700">
                       Last Week {data.type}
                     </p>
-                    <p className="text-gray-700 font-bold">${data.lastWeekamount}</p>
+                    <p className="text-gray-700 font-bold">
+                      ${data.lastWeekamount}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -74,7 +76,6 @@ const Dashboard = () => {
             <div>
               <PieChartComponent />
             </div>
-
           </div>
         </div>
         <div className="flex-2"></div>
