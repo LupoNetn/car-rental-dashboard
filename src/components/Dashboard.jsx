@@ -84,7 +84,7 @@ const Dashboard = () => {
             <div className="relative">
               <input
                 type="text"
-                className="w-full flex-2 p-1.5 border-1 outline-0 border-gray-400 rounded-md"
+                className="w-[80%] flex-2 p-1.5 border-1 outline-0 border-gray-400 rounded-md"
                 placeholder="Search Here.."
               />
               <button className="absolute top-2 left-90 hover:scale-75 cursor-pointer">
