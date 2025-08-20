@@ -127,7 +127,7 @@ const Dashboard = () => {
           <div className="mt-8 md:mt-15 bg-white/50 py-10 px-3 rounded-md shadow-lg">
             <h3 className="font-bold text-xl">Car Activity</h3>
 
-            <div className="mt-4 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="mt-4 grid grid-cols-2 lg:grid-cols-4 gap-3">
               {/* Car Number */}
               <select className="p-2 border border-gray-400 rounded-md">
                 <option>Select Car Number</option>
