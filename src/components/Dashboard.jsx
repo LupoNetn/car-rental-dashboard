@@ -1,6 +1,7 @@
 import { ArrowDown, ArrowUp, Bell, Filter, Search } from "lucide-react";
 import PieChartComponent from "./PieChart.jsx";
 import React from "react";
+import CarAreaChart from "./CarAreaChart.jsx";
 
 const statData = [
   {
@@ -33,9 +34,8 @@ const Dashboard = () => {
         - Desktop (lg+): row layout, but give the right column more breathing space
       */}
       <div className="mt-0 flex flex-col lg:flex-row">
-        
         {/* Today's Statistics Section */}
-        <div 
+        <div
           className="
             p-8 bg-gray-50 
             md:w-full         /* Tablet: full width */
@@ -96,7 +96,7 @@ const Dashboard = () => {
         </div>
 
         {/* Car Activity + Other Panels */}
-        <div 
+        <div
           className="
             p-4 
             md:w-full         /* Tablet: full width */
@@ -146,6 +146,7 @@ const Dashboard = () => {
               {/* Date */}
               <input
                 type="date"
+                placeholder="select date"
                 className="p-2 border border-gray-400 rounded-md"
               />
 
@@ -188,7 +189,11 @@ const Dashboard = () => {
                       Active
                     </td>
                     <td className="p-3 border-b border-gray-200">10:30 AM</td>
-                    <td className="p-3 border-b border-gray-200">...</td>
+                    <td className="p-3 border-b border-gray-200">
+                      <button className="p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        Details
+                      </button>
+                    </td>
                   </tr>
                   <tr>
                     <td className="p-3 border-b border-gray-200">2</td>
@@ -198,7 +203,11 @@ const Dashboard = () => {
                       Inactive
                     </td>
                     <td className="p-3 border-b border-gray-200">11:00 AM</td>
-                    <td className="p-3 border-b border-gray-200">...</td>
+                    <td className="p-3 border-b border-gray-200">
+                      <button className="p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        Details
+                      </button>
+                    </td>
                   </tr>
                   <tr>
                     <td className="p-3 border-b border-gray-200">3</td>
@@ -208,11 +217,19 @@ const Dashboard = () => {
                       Pending
                     </td>
                     <td className="p-3 border-b border-gray-200">12:00 PM</td>
-                    <td className="p-3 border-b border-gray-200">...</td>
+                    <td className="p-3 border-b border-gray-200">
+                      <button className="p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        Details
+                      </button>
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+          </div>
+
+          <div>
+            <CarAreaChart />
           </div>
         </div>
       </div>
