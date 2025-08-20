@@ -42,7 +42,7 @@ const Sidebar = () => {
       {/* 🚪 Logout button */}
       <button
         onClick={handleLogout}
-        className="w-full p-3 rounded-md flex items-center gap-2 transition cursor-pointer hover:bg-red-400 bg-red-50 text-gray-500 font-semibold"
+        className="w-[70%] md:w-full p-3 rounded-md flex items-center gap-2 transition cursor-pointer hover:bg-red-400 bg-red-50 text-gray-500 font-semibold"
       >
         <LogOut size={22} />
         <span>Logout</span>

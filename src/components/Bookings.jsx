@@ -120,7 +120,7 @@ const Bookings = () => {
       </div>
 
       {/* --- Filter Tabs --- */}
-      <div className="flex gap-3 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
         {["All", "Upcoming", "Completed", "Cancelled"].map((tab) => (
           <button
             key={tab}
