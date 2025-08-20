@@ -4,14 +4,14 @@ import Sidebar from "./Sidebar";
 
 const MainLayout = () => {
   return (
-    <div className="flex min-h-screen">
-      {/* Sidebar - fixed only on md+ */}
-      <aside className="hidden md:fixed md:top-0 md:left-0 md:h-screen md:w-64 md:bg-gray-950">
+    <div className="flex">
+      {/* Sidebar */}
+      <aside className="hidden md:block fixed left-0 top-0 h-screen w-64 bg-gray-950">
         <Sidebar />
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 w-full md:ml-64">
+      <main className="flex-1 md:ml-64 min-h-screen overflow-y-auto">
         <Outlet />
       </main>
     </div>
