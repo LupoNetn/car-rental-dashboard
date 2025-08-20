@@ -20,14 +20,14 @@ const Sidebar = () => {
   };
 
   const SidebarContent = () => (
-    <div className="w-50 md:w-35 flex flex-col items-start py-6 space-y-2 md:bg-gray-950 bg-black/60 max-md:backdrop-blur-2xl text-white">
+    <div className="w-[80%] md:w-35 flex flex-col items-start py-6 space-y-2 md:bg-gray-950 bg-black/60 max-md:backdrop-blur-2xl text-white">
       {menuItems.map((item) => (
         <NavLink
           key={item.id}
           to={item.path}
           onClick={() => setIsOpen(false)}
           className={({ isActive }) =>
-            `w-full p-3 rounded-md flex items-center gap-2 transition 
+            `w-[70%] md:w-full p-3 rounded-md flex items-center gap-2 transition 
             ${isActive ? "bg-blue-200 text-gray-900 font-semibold" : "hover:bg-gray-700"}`
           }
         >

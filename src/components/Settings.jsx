@@ -52,7 +52,9 @@ const Settings = () => {
             </button>
           </div>
 
-          <div className="flex items-center justify-between py-2">
+          {/* TO BE IMPLEMENTED */}
+
+          {/* <div className="flex items-center justify-between py-2">
             <span className="text-gray-700">Dark Mode</span>
             <button
               onClick={() => setDarkModeEnabled(!darkModeEnabled)}
@@ -66,7 +68,7 @@ const Settings = () => {
                 }`}
               ></div>
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Save Button */}

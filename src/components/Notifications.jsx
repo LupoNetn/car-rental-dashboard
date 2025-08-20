@@ -24,7 +24,7 @@ const Notifications = () => {
             className="flex items-center justify-between p-4 hover:bg-gray-50 transition"
           >
             {/* Icon + Message */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-baseline gap-3">
               {note.type === "success" ? (
                 <CheckCircle className="text-green-500" />
               ) : (
