@@ -45,7 +45,7 @@ const Dashboard = () => {
           <div>
             <div className="max-sm:flex justify-between items-center">
               <h2 className="font-bold text-xl ">Today's Statistics</h2>
-              <p className="max-sm:text-sm">Sat , 16 Aug 2025, 11:30 AM</p>
+              <p className="max-sm:text-sm">Wed , 20 Aug 2025, 12:30 PM</p>
             </div>
 
             {/* stats card */}
